@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    DETALLE VBC
+{% endblock titulo %}
+
+{% block contenido %}
+    <h4>{{object.titulo}}</h4>
+    <div>
+        
+            <img src="{{object.imagen.url}}" alt="">
+            <p>{{object.titulo}}</p>
+            <p>{{object.autor}}</p>
+            <p>{{object.fecha_publicacion}}</p>
+            
+        
+    </div>
+
+    <a href="{% url 'libros:listar_libros_clase' %}">VOLVER</a>
+
+{% endblock contenido %}
