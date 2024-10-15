@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+  Ingresar
+{% endblock titulo %}
+
+{% block contenido %}
+
+    <h4>Ingresar</h4>
+
+    <form action="" method="POST">{% csrf_token %}
+        {{form.errors}}
+        <input type="text" name="username">
+        <input type="password", name="password">
+        <button type="submit">Aceptar</button>
+    </form>
+
+
+{% endblock contenido%}

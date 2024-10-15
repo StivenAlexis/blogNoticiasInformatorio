@@ -12,9 +12,21 @@
         <img src="{% static 'img/logo.png' %}" alt="" width="150" height="150">
         
         <ul >
-                <li class="menu"><a href="{% url 'home' %}">HOME</a></li>       
-                <li class="menu"><a href="{% url 'usuario:registro_usuario' %}">REGISTRAR</a></li> 
+                <li class="menu"><a href="{% url 'home' %}">Pagina Inicio</a></li>       
+                <li class="menu"><a href="{% url 'usuario:registro_usuario' %}">Nuevo usuario</a></li>
+                <li class="menu"><a href="{% url 'usuario:login' %}">Ingresar</a></li> 
                         
+
+
+
+            {% if user.is_authenticated %}
+                <li class="menu"><b>Hola {{user.username}}</b></li>
+                <li class="menu"><a href="{% url 'usuario:logout' %}">Salir</a></li>
+                              
+                {% else %}
+                <li class="menu"><a href="{% url 'usuario:registro_usuario' %}">Nuevo usuario</a></li> 
+                <li class="menu"><a href="{% url 'usuario:login' %}">Ingresar</a></li>
+            {% endif %}
 
         </ul>
     </div>

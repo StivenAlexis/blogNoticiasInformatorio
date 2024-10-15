@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block titulo %}
-  Login
+  Registro
 {% endblock titulo %}
 
 {% block contenido %}
@@ -11,7 +11,7 @@
     <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
         {{form.as_p }}
 
-        <button type="submit">Login</button>
+        <button type="submit">Nuevo usuario</button>
     </form>
 
 
