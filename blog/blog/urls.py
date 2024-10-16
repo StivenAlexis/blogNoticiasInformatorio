@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin # type: ignore
 from django.urls import path, include
+
+#para acceso del server a MEDIA (imports)
 from django.conf.urls.static import static
 from django.conf import settings
 from . import views
