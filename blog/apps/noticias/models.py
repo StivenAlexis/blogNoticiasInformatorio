@@ -1,5 +1,5 @@
 from django.db import models
-from ..usuarios.models import Usuario
+from django.contrib.auth.models import User
 from datetime import date 
 
 class Categoria(models.Model):
@@ -46,7 +46,7 @@ class Comentario(models.Model):
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     noticia = models.ForeignKey(Noticia, on_delete = models.CASCADE, 
                                 null = False, related_name="comentario_noticia")
-    autor = models.ForeignKey(Usuario, on_delete = models.CASCADE, 
+    autor = models.ForeignKey(User, on_delete = models.CASCADE, 
                                 null = False, related_name="comentario_autor") 
     # imagen_adjunta = archivo tipo imagen
     

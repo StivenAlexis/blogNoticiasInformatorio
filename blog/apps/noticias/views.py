@@ -14,17 +14,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin # para clases
 def listar(request):
     # creo diccionario CONTEXT para pasar datos al template
     ctx = dict()
-    # BUSCAR LAS NOTICIAS EN LA BD
-    
-    # BUSCAR LO QUE QUIERO EN LA BD
-    #  todas_noticias = Noticia.objects.all() # devuelve un diccionario 
-    # de objeto de tipo Noticia
-    # print(todas_noticias) # esto se imprime en la consola del CMD cuando 
-    # iniciamos el servidor con 'python manage.py runserver' y luego vamos a
-    # la vista de noticias
-    
-    # orden_noticias = request.POST.get('orden_noticias_name')
-    # mas_antiguas // mas_recientes
     
     if request.method == "POST":
         categoria_id = request.POST.get('categoria_name', 'todas')

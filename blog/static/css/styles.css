@@ -633,7 +633,7 @@
   overflow: hidden;
 }
 .footer-wave {
-  background-image: url(../img/footer-shape.png);
+  background-image: url();
   position: absolute;
   left: 0;
   top: 0;

@@ -4,13 +4,7 @@ from django.http import HttpResponseRedirect
 
 def Home(request):
 
-    return render(request,'home.html')
-
-def Login(request):
-    return render(request, 'usuarios/log_in.html')
-
-def Register(request):
-    return render(request, 'usuarios/sign_up.html')
+    return render(request,'base.html')
 
 def SobreNosotros(request):
     return render(request, 'sobre nosotros/sobre_nosotros.html')

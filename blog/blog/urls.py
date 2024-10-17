@@ -28,7 +28,7 @@ urlpatterns = [
     path('admin_redirect/', views.AdminRedirect, name="admin_redirect"),
     
     path('login/', 
-         auth_views.LoginView.as_view(template_name="usuarios/log_in.html"),
+         auth_views.LoginView.as_view(template_name="usuarios/login.html"),
          name = 'login'),
     path('logout/', auth_views.LogoutView.as_view(), name = 'logout'),
     path('sobrenosotros/', views.SobreNosotros, name = 'sobrenosotros'),

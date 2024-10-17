@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-{% block head_contact %}
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,18 +16,14 @@
     <script src="" crossorigin="anonymous"></script>
     <script src="{% static ''%}"></script>  
 </head>
-{% endblock head_contact %}
+
 <body>
     <!-- PRECARGA -->
-    <div class="loader">
-        <img src="{% static '' %}" alt="">
-    </div>
-    {% block body_contact %}
 
     <header class="Header">
         <div class="container__menu">
             <div class="logo">
-                <a href="{% url 'home' %}"><img src="{% static 'img/logo.png'%}" alt=""></a>
+                <a href="{% url 'home' %}"><img src="{% static 'img/logo.png'%}" alt="Logo de la empresa"></a>
             </div>
             <div class="menu">
                 <input type="checkbox" id="check__menu">
@@ -37,7 +33,7 @@
                         <span class="line2__bars-menu"></span>
                         <span class="line3__bars-menu"></span>
 
-                        <script src="{% static 'js/script.js' %}"></script>
+                        <script src="{% static '' %}"></script>
                     </div>
                 </label>
 
@@ -83,7 +79,7 @@
             </div>        
         </div>
     </header>
-    {% block header %}
+
     <div class="noticias__container">
         <div class="letra__container"></div>
     </div>
@@ -99,7 +95,6 @@
     
     
 
-    {% endblock header %}
     <div class="footer_sabias">
         <footer class="footer-area">
             <div class="footer-wave-box">
@@ -145,7 +140,11 @@
     </div>   
 
 
-    {% endblock body_contact %}
+    
+    {% block contenido %}
+
+    {% endblock contenido %}
+
 
 </body>
 </html>
