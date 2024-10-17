@@ -16,12 +16,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Application definition
-AUTH_USER_MODEL = 'usuarios.Usuario' #indica el modelo de usuario a usar
-#               =  (aplicacion).(modelo)
 # AUTH
-
 from django.urls import reverse_lazy
 LOGIN_REDIRECT_URL = reverse_lazy('home')
 LOGOUT_REDIRECT_URL = reverse_lazy('home')
@@ -46,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.libros',
     'apps.usuarios',
     'apps.noticias',
     'apps.contacto',

@@ -36,7 +36,6 @@ urlpatterns = [
     path('noticia_detalles/', views.NoticiaDetalles, name = 'noticia_detalles'),
 
     path('',views.Home, name = 'home'),
-    path('libros/', include('apps.libros.urls')),
     path('Noticias/', include('apps.noticias.urls')),
     path('Usuarios/', include('apps.usuarios.urls')),
     path('Contacto/', include('apps.contacto.urls')),

@@ -32,6 +32,6 @@ def enviar_contacto(request):
     Email:\n\t\t{form_data['email']}\n
     Telefono:\n\t\t{form_data['telefono']}\n
     '''
-    send_mail('Solicitud de contacto desde BOTELLAS_DE_AMOR', mensaje, '',
-              ['testgrupo5pf@outlook.com.ar']) 
+    send_mail('Solicitud de contacto desde -----', mensaje, '',
+              ['correotemp@mail.com']) 
     return render(request, 'index.html')

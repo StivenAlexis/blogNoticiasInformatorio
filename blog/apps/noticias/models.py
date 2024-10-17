@@ -2,9 +2,6 @@ from django.db import models
 from ..usuarios.models import Usuario
 from datetime import date 
 
-
-# Create your models here.
-
 class Categoria(models.Model):
     nombre = models.CharField(max_length = 60)
     descripcion = models.CharField(max_length = 250, null = True, blank = True)
@@ -25,7 +22,7 @@ class Noticia(models.Model):
     creado = models.DateField(auto_now_add = True)
     cuerpo = models.TextField()
     autor = models.CharField(max_length = 50, null = True, blank = True, 
-                             default="Botellas de Amor")
+                             default="Noticias Chacú")
     imagen = models.ImageField(upload_to = 'noticias', null = True, blank = True)
     # 'null' es para que la BD acepte valores nulos. 'Blank' es para que el 
     # formulario (la entrada) permita valores VACIOS. Van los dos juntos.
