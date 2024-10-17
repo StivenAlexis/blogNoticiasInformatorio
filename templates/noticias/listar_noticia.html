@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Noticias Chaco</title>
+</head>
+<body>
+    <h1>Ultimas Noticias</h1>
+    <ul>
+        {% for noticia in noticias %}
+            <li>
+                <a href="{% url 'detalle_noticia' noticia.pk %}">{{ noticia.titulo }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

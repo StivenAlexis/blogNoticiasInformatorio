@@ -1,13 +1,53 @@
 {% extends 'base.html' %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Noticias</title>
-</head>
+    <title>Noticias Chaco </title>
+    <link rel="stylesheet" href="style.main/css"> 
+ </head>
 <body>
-    <div><h3>Noticias 2024</h3></div>
+    <header>
+        <h1>Noticias Chaco</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Tecnología</a></li>
+                <li><a href="#">Deportes</a></li>
+                <li><a href="#">Entretenimiento</a></li>
+                <li><a href="#">Locales</a></li>
+                <li><a href="#">Economía</a></li>
+                <li><a href="#">Nacionales</a></li>
+                <li><a href="#">Cultura - Espectaculos</a></li>
+                <li><a href="#">Internacionales</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destacadas">
+            <h2>Noticias Destacadas</h2>
+            <article>
+                <h3>Crean App que te dice si estás bebiendo microplásticos</h3>
+                <p>Los métodos actuales son complejos y caros, pero esta aplicación facilita y abarata el proceso. ¿Cuántos
+                    microplásticos hay en tu vaso de agua?</p>
+                <a href="#">Leer más</a>
+            </article>
+            </section>
+
+        <section class="ultimas-noticias">
+            <h2>Últimas Noticias</h2>
+            <ul>
+                <li><a href="#">Título de la noticia 2</a></li>
+                <li><a href="#">Título de la noticia 3</a></li>
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Blog de Noticias. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

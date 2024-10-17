@@ -6,29 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLOG {% block titulo %}{% endblock titulo%}</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+   
 </head>
 <body>
     <div class="div-principal">
         <img src="{% static 'img/logo.png' %}" alt="" width="150" height="150">
+    
+    <ul >
+            <li class="menu"><a href="{% url 'home' %}">Pagina Inicio</a></li> 
+    </ul >
         
-        <ul >
-                <li class="menu"><a href="{% url 'home' %}">Pagina Inicio</a></li>       
-                <li class="menu"><a href="{% url 'usuario:registro_usuario' %}">Nuevo usuario</a></li>
-                <li class="menu"><a href="{% url 'usuario:login' %}">Ingresar</a></li> 
-                        
+        {% if user.is_authenticated %}
+    <ul>
+         <li class="menu"><a href="{% url 'home' %}">Pagina Inicio</a></li>       
+         <li class="menu"><a href="{% url 'usuario:login' %}">Ingresar</a></li> 
+
+         <li class="menu"><b>Hola {{ user.get_full_name|default:user.username }}</b></li>
+         <li class="menu"><a href="{% url 'usuario:logout' %}">Salir</a></li>
+      </ul>
+       {% else %}
+    <ul>
+        <li class="menu"><a href="{% url 'usuario:registro_usuario' %}">Nuevo usuario</a></li>
+        <li class="menu"><a href="{% url 'usuario:login' %}">Ingresar</a></li>
+    </ul>
+{% endif %}
 
 
-
-            {% if user.is_authenticated %}
-                <li class="menu"><b>Hola {{user.username}}</b></li>
-                <li class="menu"><a href="{% url 'usuario:logout' %}">Salir</a></li>
-                              
-                {% else %}
-                <li class="menu"><a href="{% url 'usuario:registro_usuario' %}">Nuevo usuario</a></li> 
-                <li class="menu"><a href="{% url 'usuario:login' %}">Ingresar</a></li>
-            {% endif %}
-
-        </ul>
     </div>
 
     {% block contenido %}

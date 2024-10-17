@@ -9,3 +9,5 @@ class RegistroUsuario(CreateView):
     form_class = FormularioRegistroUsuario
     success_url = reverse_lazy('home')
 
+
+

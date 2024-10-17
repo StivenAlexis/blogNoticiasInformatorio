@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+  EDITAR
+{% endblock titulo %}
+
+{% block contenido %}
+
+    <h4>Modificar Noticias: {{object.titulo}}</h4>
+
+    <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        {{form.as_p }}
+
+        <button type="submit">EDITAR</button>
+    </form>
+
+
+{% endblock contenido%}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    DETALLE VBF
+{% endblock titulo %}
+
+{% block contenido %}
+
+<h4>{{noticia.titulo}}</h4>
+    <div>
+        
+            <img src="{{noticia.imagen.url}}" alt="">
+            <p><b>TITULO: </b>{{noticia.titulo}}</p>
+            <p><b>FECHA DE PUBLICACION: </b>{{noticia.fecha_publicacion}}</p>
+            <p><b>CUERPO: </b>{{noticia.cuerpo}}</p>
+    </div>
+   
+    <a href="{% url 'noticia:listar_noticia' 'todos' %}">VOLVER</a>
+
+{% endblock contenido %}
+
