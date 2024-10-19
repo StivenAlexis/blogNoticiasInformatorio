@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+    
+    <title>FQ PAGE</title>
+    <link rel="shortcut icon" href="{% static 'img/.png' %}" type="image/x-icon">
+    
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    
+    <!-- MAIN TITTLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    
+    <!-- TEXT BELOW THE MAIN TITTLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/faq.css' %}">
+    <link href="{% static 'css/font/font1.css' %}" rel="stylesheet" >
+</head>
+{% block content %}
+<body>
+
+    <!-- PRELOADING 
+    <div class="loader">
+        <img src="{% static 'img/.gif' %}" alt="">
+    </div>   -->
+    
+    <!-- HEADER SECTION -->
+    <header id="header">
+        <div class="container__header">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="{% static 'img/.png' %}" alt=""></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container_all" id="container__all">
+        <div class="cover">
+
+            <!--INICIO WAVE-->
+            
+
+                <div class="bg_color"></div>
+                <div class="wave w1"></div>
+                <div class="wave w2"></div>
+
+            <!--FINAL WAVE-->
+
+            <div class="container__cover">
+                <div class="container__info">
+                    <h1>PREGUNTAS </h1>
+                    <h2>FRECUENTES (FAQ)</h2>
+                    <p>Soluciones a las dudas que pueden surgir durante el tránsito en el sitio</p>
+
+                </div>
+                <div class="container__vector">
+                    <img src="{% static 'img/.png' %}" alt="">
+                </div>
+                
+            </div>
+        </div><br><br>
+        
+
+    <!-- FQ SECTION -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <!-- Question One -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a href="#collapseOne" role="button" data-toggle="collapse" data-parent="#accordion"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    ¿Realmente necesito  leer este blog?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                            aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Claro que si, porque contiene información confiable con el objetivo de entregarte buenas noticias, en su mayoría sobre avances en ciencia y tecnología. Aportándote novedades que te van a interesar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question Two -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" href="#collapseTwo" role="button" data-toggle="collapse"
+                                    data-parent="#accordion" aria-expanded="false" aria-controls="collapseTwo">
+                                    ¿Tiene costo acceder a los artículos de Chacú Noticias?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                            aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>No! Chacú Noticias es totalmente gratuito y te permite comentar sin necesidad de pagar suscripciones.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question Three -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" href="#collapseThree" role="button" data-toggle="collapse"
+                                    data-parent="#accordion" aria-expanded="false" aria-controls="collapseThree">
+                                    ¿Como creo mi usuario?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                            aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Haciendo click en “iniciar sesión” completando el formulario. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question Four -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" href="#collapseFour" role="button" data-toggle="collapse"
+                                    data-parent="#accordion" aria-expanded="false" aria-controls="collapseFour">
+                                    ¿Como me logueo?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                            aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <p>Iniciando sesión con el usuario y contraseña que definiste al logearte. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question Five -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" href="#collapseFive" role="button" data-toggle="collapse"
+                                    data-parent="#accordion" aria-expanded="false" aria-controls="collapseFive">
+                                    Olvide mi clave ¿como la recupero?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+                            aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <p>De momento no poseemos capacidad en el sitio para recuperar contraseña,
+                                     asi que se requerirá la creación de un nuevo usuario</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div><br><br><br><br><br>
+    {% endblock content %}
+
+    <script src=" {% static 'js/pre.js' %}" charset="utf-8"></script>
+    <script src="{% static 'js/accodion.js' %}"></script>
+    <script src="{% static 'js/script_preguntas_frecuentes.js' %}"></script>
+</body>
+
+</html>

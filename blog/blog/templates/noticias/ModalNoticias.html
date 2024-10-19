@@ -2,20 +2,18 @@
 {% load static %}
 
     {% block css %}
-    <link rel="stylesheet" href="{% static 'css/noticias1.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/noticias2.css' %}" />
+    <link rel="stylesheet" href="{% static '' %}" />
+    <link rel="stylesheet" href="{% static '' %}" />
     {% endblock css %}
 
-    {% block content %}    
-    
-      
+    {% block header %}
     <div class="btn_noticias">
       <form class="form_noticias" method="POST">{% csrf_token %}
         <div class="div_categorias">
           <label for="categorias_label">Elija una categoria:</label> 
           <br>
           <select name="categoria_name" id="categoria_id">
-              <option value="todas">Mostrar todas</option>
+              <option value="todas">TODAS</option>
           {% for categoria in categorias %}
               <option value={{categoria.id}}> {{categoria.nombre}} </option>
           {% endfor %}
@@ -25,8 +23,8 @@
         <div class="div_categorias">
           <label for="categorias_label">Ordenados por:</label> <br>
           <select name="orden_noticias_name" id="orden_noticias_id">
-              <option value="mas_recientes">Más reciente primero</option>
-              <option value="mas_antiguas">Más antiguo primero</option>
+              <option value="mas_recientes">Más Recientes</option>
+              <option value="mas_antiguas">más antiguas</option>
           </select> <br>
         </div>
           <input class="btn_cambios" type="submit" value="Aplicar Cambios">
@@ -35,31 +33,28 @@
 
     <!-- primer bloque -->
     <div class="container">
-      <div class="noticias__container">
       {% for noti in noticias %}
         <div class="card inline">
           <figure>
             {% if noti.imagen %}
-              <img src="{{noti.imagen.url}}"/>
+              <img src="{{noti.imagen.url}}" />
             {% else %}
-              <img src="{% static 'img/logofade.gif' %}" />
+              <img src="{% static 'img/3dgifmaker78797.gif' %}" />
             {% endif %}
           </figure>
           <div class="contenido">
             <h3>{{noti.titulo}}</h3>
             <p>{{noti.creado}}</p>
-            <p>{{noti.cuerpo|truncatechars:50|wordwrap:10}} </p>
-            
+            <p>{{noti.cuerpo|truncatechars:50|wordwrap:10}}</p>
             <a
               href="{% url 'noticias:detalle_noticias' noti.pk  %}"
               onclick="openModal('firstTitle','firstCommnet','firstImg')"
               target="_self"
               id="myBtn"
-              >Leer más...</a>
+              >Leer mas...</a>
           </div>
         </div>
       {% endfor %}
-      </div>
     </div>
     
     <!-- Paginacion -->
@@ -83,10 +78,8 @@
         </span>    
       </div>
     </div>
-  
+
     <!-- Fin Paginacion -->
   <script src="{% static 'js/utils.js' %}"></script>
+  {% endblock header %}
 
-
-  {% endblock content %}
-  

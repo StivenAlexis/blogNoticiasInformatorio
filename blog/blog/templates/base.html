@@ -2,23 +2,25 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias Chacú</title>
     <link rel="icon" href="{% static 'img/logo.png' %}">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Styles.css' %}">
     {% block css %}
         
     {% endblock css %}
     <script src="" crossorigin="anonymous"></script>
     <script src="{% static ''%}"></script>  
+
 </head>
 
-<body>
+
     <!-- PRECARGA -->
+   
 
     <header class="Header">
         <div class="container__menu">
@@ -51,7 +53,7 @@
                             {% endif %}
                         </div>
                         {% if request.user.is_staff %}
-                        <li><a href="{% url 'admin_redirect' %}">SECCION ADMIN </a>
+                        <li><a href="{% url 'admin_redirect' %}">SECCION ADMIN</a>
                         {% endif %}
                         <li ><a href="{% url 'noticias:listar_noticias' %}">Noticias</a>
                         </li>
@@ -62,14 +64,18 @@
                             </ul>
                         </li>
                         
-                        <li><a href="{% url 'contactos:contactanos'%}" target="_blank">Contactanos</a></li>
+                        <li><a href="{% url 'contactos:contactanos'%}">Contactanos</a></li>
                         </li>
                     </ul>
                     <div class="login__container">
                         {% if user.is_authenticated %}
                             <div class="cerrar_sesion">
                                 <span class="bienvenida">Bienvenido/a {{user.username}}!!</span>
-                                <a href="{% url 'logout' %}" class="btn1"><button>Cerrar Sesion</button></a>
+                                <form action="{% url 'logout' %}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit">Cerrar Sesión</button>
+                                </form>
+                                <!-- <a href="{% url 'logout' %}" class="btn1"><button>Cerrar Sesión</button></a>-->
                             </div>
                         {% else %}
                         <a href="{% url 'login' %}" class="btn"><button>Iniciar Sesion</button></a>
@@ -80,32 +86,33 @@
         </div>
     </header>
 
+
+<body>
     <div class="noticias__container">
-        <div class="letra__container"></div>
-    </div>
-    <main class="main_index">
-        <div class="container_main">
-            <div class="words1">
-                <h1 class="words">Chacú Noticias</h1>
-                <h2 class="words__h2">Información confiable a un click de distancia</h2>             
-            </div>
+             
+{% block content %}
+<main class="main_index">
+    <div class="container_main">
+        <div class="words1">
+            <h1 class="words">Chacú Noticias</h1>
+            <h2 class="words__h2">Información confiable a un click de distancia</h2>             
         </div>
-    </main>
+    </div>
+</main>
+{% endblock content %}
+</div>
+</body>
 
-    
-    
 
-    <div class="footer_sabias">
-        <footer class="footer-area">
-            <div class="footer-wave-box">
-                <div class="footer-wave footer-animation"></div>
-            </div>
-            <div class="main_index">
-                <div class="footer">
-                    <div class="single-footer">
-                        <h4>SOBRE NOSOTROS</h4>
+<footer class="footer-area">
+    <div class="footer-wave-box">
+        </div>
+        <div class="main_index">
+            <div class="footer">
+                <div class="single-footer">
+                    <h4>SOBRE NOSOTROS</h4>
                         <ul>
-                            <li><a href="{% url 'sobrenosotros' %}"><i class="fas fa-chevron-right"></i> ¿Qué hacemos? </a></li>
+                            <li><a href="{% url 'sobrenosotros' %}"><i class="fas fa-chevron-right"></i> ¿Quiénes somos? </a></li>
                             <li><a href="{% url 'preguntasFQ' %}"><i class="fas fa-chevron-right"></i> Preguntas Frecuentes </a></li>
                         </ul>
     
@@ -136,15 +143,8 @@
                     <p>© Copyright 2024 Informatorio <b>Grupo 6</b> - Chaco. All Rights Reserved.</p>
                 </div>
             </div>
-        </footer>   
-    </div>   
+</footer>   
 
+ 
 
-    
-    {% block contenido %}
-
-    {% endblock contenido %}
-
-
-</body>
 </html>

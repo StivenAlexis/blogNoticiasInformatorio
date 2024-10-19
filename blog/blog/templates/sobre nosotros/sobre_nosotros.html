@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+      <link rel="stylesheet" href="{% static 'css/sobre_nosotros.css' %}">
+{% endblock css %}
+
+
+{% block content %}
+  <div class="row" id="row1">
+    <div class="column" id="colaa">
+      <p>
+            ¿Quiénes somos?<b> Noticias Chacú </b> Somos un portal de noticias
+            especializado en la difusión  <br />confiable y verosímil<br /> de información, avalada por
+            nuetro equipo de periodistas y editores.
+      </p>
+        </div>
+        <div class="column" id="colba">
+          <img src="{% static 'img/RRR2.jpg' %}" alt="hola" id="imgrow1" />
+        </div>
+      </div>
+      <div class="row" id="row2">
+        <div class="column verticalText" id="colab">
+          <p>¿Qué hacemos?</p>
+        </div>
+        <div class="column" id="colbb">
+          <p id="p_sobre">
+            ........
+          </p>
+        </div>
+        <div class="column" id="colcb"><p></p></div>
+      </div>
+      <div class="row" id="row3">
+        <div class="column" id="colac">
+          <img src="{% static 'img/MundoTextoBlanco.png' %}" alt="hola" id="imgrow1" />
+        </div>
+        <div class="column" id="colbc">
+          <p>
+            .......
+          </p>
+        </div>
+      </div>
+      <div class="row" id="row4">
+        <div class="column" id="colad"><p>¿Cómo funciona?</p></div>
+        <div class="column" id="colbd">
+          <ul>
+            <li>      
+              Los invitamos a disfrutar nuestro blog de noticias “Chacú”,  
+              que con el fin de demostrar lo aprendido replicamos contenido 
+              seleccionado para llevar novedades a cada uno de ustedes.
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div id="row5">
+        <div id="faces">
+          <div class="verticalText">
+            <p>Integrantes</p>
+          </div>
+          <div class="animated">
+            <img class="roundedImg" src="{% static 'img/' %}" alt="Gorostizu, Ricardo Felix" />
+            <p>Gorostizu, Ricardo Felix</p>
+          </div>
+          <div class="animated">
+            <img class="roundedImg" src="{% static 'img/.png' %}" alt="Pensi, Roxana" />
+            <p>Pensi, Roxana</p>
+          </div>
+          <div class="animated">
+            <img class="roundedImg" src="{% static 'img/.png' %}" alt="Parcellier Alexis" />
+            <p>Parcellier Alexis</p>
+          </div>
+          <div class="animated">
+            <img class="roundedImg" src="{% static 'img/.png' %}" alt="Bonguan, Juliana" />
+            <p>Bonguan, Juliana</p>
+          </div>
+          <div class="animated">
+            <img class="roundedImg" src="{% static 'img/' %}" alt="Stevens, Sofia Federica" />
+            <p>Stevens, Sofia Federica</p>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock content %}

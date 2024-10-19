@@ -1,19 +1,11 @@
 from django.shortcuts import render
-
 from django.core.mail import send_mail
+from django.http import HttpResponse
+from django.conf import settings
 
-# Create your views here.
-
-def info_contacto(request):
-    return render(request, 'contactos/info_contactos.html')
-
-# pendiente: ver como hacer el INPUT del que se contacte
 def contactanos(request):
-    return render(request, 'contactos/Contact-form.html')
+    return render(request, 'contactos/contact_form.html')
 
-# referencia: 
-# https://martinfritz.medium.com/create-contact-form-and-send-emails-to-your-gmail-account-using-django-86ac6f739a86
-# 
 def enviar_contacto(request):
     nombre = request.POST['contacto_nombre_name']
     mensaje = request.POST['contacto_mensaje_name']
@@ -32,6 +24,9 @@ def enviar_contacto(request):
     Email:\n\t\t{form_data['email']}\n
     Telefono:\n\t\t{form_data['telefono']}\n
     '''
-    send_mail('Solicitud de contacto desde -----', mensaje, '',
-              ['correotemp@mail.com']) 
-    return render(request, 'index.html')
+    if settings.DEBUG:
+        return render(request, 'base.html')
+    else:
+        send_mail('Solicitud de contacto desde Noticias Chacú', mensaje, '',
+              ['MAILTEMPORAL@GMAIL.com'])
+        return render(request, 'base.html')
