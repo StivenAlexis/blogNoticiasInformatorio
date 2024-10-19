@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from django.contrib.auth.views import LogoutView
 
 
 def Home(request):
@@ -24,3 +25,6 @@ def SobreNosotros(request):
 
 def PreguntasFQ(request):
     return render(request, 'sobre nosotros/faq.html')
+
+class LogoutView(LogoutView):
+    template_name = 'accounts/logout.html'
