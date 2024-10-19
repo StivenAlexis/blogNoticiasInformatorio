@@ -9,6 +9,12 @@ def Home(request):
 def AdminRedirect(request):
     return HttpResponseRedirect('/admin')
 
+def Login(request):
+    return render(request, 'usuarios/login.html')
+
+def Register(request):
+    return render(request, 'usuarios/registro.html')
+
 
 def NoticiaDetalles(request):
     return render(request, 'noticias/ModalNoticias.html')

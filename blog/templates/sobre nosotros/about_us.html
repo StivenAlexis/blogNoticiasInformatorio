@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 
-      {% block css %}
-      <link rel="stylesheet" href="{% static '' %}">
-      {% endblock css %}
+{% block css %}
+      <link rel="stylesheet" href="{% static 'css/sobre_nosotros.css' %}">
+{% endblock css %}
 
 
-      {% block body %}
-      <div class="row" id="row1">
-        <div class="column" id="colaa">
-          <p>
+{% block content %}
+  <div class="row" id="row1">
+    <div class="column" id="colaa">
+      <p>
             ¿Quiénes somos?<b> Noticias Chacú </b> Somos un portal de noticias
             especializado en la difusión  <br />confiable y verosímil<br /> de información, avalada por
             nuetro equipo de periodistas y editores.
-          </p>
+      </p>
         </div>
         <div class="column" id="colba">
           <img src="{% static 'img/RRR2.jpg' %}" alt="hola" id="imgrow1" />
@@ -80,12 +80,5 @@
           </div>
         </div>
       </div>
-      <div>
-        <h3>
-          <marquee>
-            ------ &#10084;
-          </marquee>
-        </h3>
-      </div>
     </div>
-    {% endblock body %}
+{% endblock content %}

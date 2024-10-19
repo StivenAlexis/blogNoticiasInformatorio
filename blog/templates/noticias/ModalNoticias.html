@@ -4,12 +4,13 @@
     {% block css %}
     <title>Chacú Noticias</title>
     <link rel="icon" href="{% static 'img/Logo.png' %}">
-    <link rel="stylesheet" href="{% static 'css/style_detalles_noticias1.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/detalles_noticias1.css' %}" />
     <script src="https://kit.fontawesome.com/8d53197554.js" crossorigin="anonymous"></script>
     {% endblock css %}
-    {% block body %}
 
-    
+
+{% block content %}
+
     <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
@@ -61,8 +62,7 @@
           {% if user.is_authenticated %}
             <form method="POST" action={% url 'noticias:agregar_comentario' noticia.pk %} class="row comments" id="inputComment">
               {% csrf_token %} 
-              <!-- nota para FRONT: controlar que el comentario no este vacio
-              se puede hacer con un JS, por ejemplo-->           
+  
               <input 
                 type="text" 
                 name="coment" id="" 
@@ -76,7 +76,6 @@
                 class="imputBtn"
               >
             </form>
-            {% comment %} por defecto los forms viejan a la misma vista que levanto el form {% endcomment %}
           {% endif %}
         </div>
         <!-- comentarios -->
@@ -84,4 +83,4 @@
     </div>
     <script src="utils.js"></script>
 
-    {% endblock body %}
+    {% endblock content %}
