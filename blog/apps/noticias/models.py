@@ -32,8 +32,7 @@ class Noticia(models.Model):
     # una categoria, automaticamente se van a borrar todas las notis de esa cat.
     categoria = models.ForeignKey(Categoria, on_delete = models.CASCADE, 
                                   null = True)
-    # noticia.comentario_set.all
-    
+
     def __str__(self) -> str:
         return self.titulo
     def get_comentarios_noticia(self):

@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="{% static '' %}" />
     {% endblock css %}
 
-    {% block header %}
+    {% block body %}
+      
     <div class="btn_noticias">
       <form class="form_noticias" method="POST">{% csrf_token %}
         <div class="div_categorias">
@@ -23,8 +24,8 @@
         <div class="div_categorias">
           <label for="categorias_label">Ordenados por:</label> <br>
           <select name="orden_noticias_name" id="orden_noticias_id">
-              <option value="mas_recientes">Más Recientes</option>
-              <option value="mas_antiguas">más antiguas</option>
+              <option value="mas_recientes">Más reciente primero</option>
+              <option value="mas_antiguas">Más antiguo primero</option>
           </select> <br>
         </div>
           <input class="btn_cambios" type="submit" value="Aplicar Cambios">
@@ -33,13 +34,15 @@
 
     <!-- primer bloque -->
     <div class="container">
+      <div class="noticias__container">
+        <div class="letra__container">
       {% for noti in noticias %}
         <div class="card inline">
           <figure>
             {% if noti.imagen %}
               <img src="{{noti.imagen.url}}" />
             {% else %}
-              <img src="{% static 'img/3dgifmaker78797.gif' %}" />
+              <img src="{% static 'img/logofade.gif' %}" />
             {% endif %}
           </figure>
           <div class="contenido">
@@ -55,6 +58,8 @@
           </div>
         </div>
       {% endfor %}
+      </div>
+    </div>
     </div>
     
     <!-- Paginacion -->
@@ -78,8 +83,9 @@
         </span>    
       </div>
     </div>
-
+  
     <!-- Fin Paginacion -->
   <script src="{% static 'js/utils.js' %}"></script>
-  {% endblock header %}
 
+
+  {% endblock body %}
