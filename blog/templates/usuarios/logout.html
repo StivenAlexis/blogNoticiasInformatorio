@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+  Logout
+{% endblock titulo %}
+
+{% block contenido %}
+  <h1>Has cerrado sesión correctamente</h1>
+  <p><a href="{% url 'home' %}">Volver a la página de inicio</a></p>
+{% endblock contenido %}
