@@ -8,6 +8,10 @@ Repositorio del proyecto final de la 2da etapa del Informatorio (2024)
 * [Pensi, Roxana](https://github.com/RoxanaPensi)
 * [Bonguan, Juliana](https://github.com/bonseq)
 * [Stevens, Sofia Federica](https://github.com/sophie-fefe8)
+<<<<<<< HEAD
 * [Monsalvo, Stiven](https://github.com/StivenAlexis) 
 
 
+=======
+* [Monsalvo, Stiven](https://github.com/StivenAlexis) 
+>>>>>>> 749fe06fad95fb769cbf09a45fd8b9663c478b97
