@@ -29,8 +29,21 @@
 }
 
 
+/*.words__h2 {
+    font-family: 'Roboto';
+    font-size: 1vw;
+    padding: 20px 0;
+    color: #000000;
+    text-shadow: 200px 75px 75px #95caea;
+  }
 
-
+.words__h3 {
+    font-family: 'Roboto';
+    font-size: 0.35vw;
+    padding: 20px 0;
+    color: #000000;
+  }
+*/
 *{
     margin: 0;
     padding: 0;
@@ -99,33 +112,6 @@ header .logo img{
 
 /*WAVE INICIO*/
 
-.bg_color{
-    width: 100%;
-    height: 65%;
-    background: linear-gradient(to top, #eef451, hsl(52, 98%, 53%));
-    position: absolute;
-    top: 0;
-    z-index: 5;
-}
-
-.wave{
-    width: 6000px;
-    height: 100%;
-    position: absolute;
-    top: 335px;
-    left: 0;
-    background-image: url(../img/yellowave.png);
-    background-position: bottom;
-}
-
-.w1{
-    animation: w1 7s linear infinite;
-}
-
-.w2{
-    animation: w2 7s linear -.125s infinite, desplazamiento 7s ease -.125s infinite;
-    opacity: 0.5;
-}
 
 @keyframes w1 {
     0%{
@@ -175,55 +161,7 @@ header .logo img{
 }
 
 /* TITTLE FONT */
-@font-face{
-    font-family: Balloon-dreams;
-    src: url(../font/BALLOON-DREAMS.ttf);
-}
 
-.cover h1{
-    font-family: "Balloon-dreams";
-    max-width: 400px;
-    font-size: 90px;
-    font-weight: 400;
-    color: #fff;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.446);
-}
-
-@font-face{
-    font-family: Croissant;
-    src: url(../font/CroissantLover.ttf);
-}
-
-.cover h2{
-    font-family: "Croissant";
-    font-size: 150px;
-    font-weight: 200;
-    color: #f9754d;
-    margin-top: -50px;
-}
-
-.cover p{
-    margin-top: -10px;
-    margin-left: 1.2rem;
-    color: rgb(0, 0, 0);
-    text-align: justify;
-}
-
-.container__vector{
-    position: relative;
-    z-index: 12;
-}
-
-.container__vector img{
-    position: absolute;
-    top: -14rem;
-    right: 0px;
-    width: 600px;
-    transition: all 300ms;
-    animation: move_vector 6s ease-in-out infinite;
-    width: 550px;
-    height: 550px;
-}
 
 @keyframes move_vector{
     0%{
@@ -345,213 +283,3 @@ header .logo img{
 
 }
 
-/*--------------ACCORDION SECTION--------------*/
-a:hover,
-a:focus{
-    text-decoration: none;
-}
-
-.sub-text{
-    font-family: 'PT Sans', sans-serif;
-    font-size: 15px;
-}
-
-.panel-group{
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
-    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.04);
-    margin-top: -10rem;
-    margin-bottom: 0;
-    padding: 30px;
-}
-
-#accordion .panel{
-    border: medium none;
-    border-radius: 18px;
-    margin: 0 0 15px 10px;
-}
-
-#accordion .panel-heading{
-    border-radius: 30px;
-    padding: 0;
-}
-
-#accordion .panel-title a{
-    background: #5dcc42;
-    border: 1px solid transparent;
-    border-radius: 30px;
-    color: rgb(255, 255, 255);
-    display: block;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 10px 20px 10px 50px;
-    position: relative;
-    transition: all 0.3s ease 0s;
-    font-family: "Poppins", sans-serif;
-}
-
-#accordion .panel-title a.collapsed{
-    background: rgb(255, 255, 255);
-    border: 1px solid #ddd;
-    color: #333;
-}
-
-#accordion .panel-title a::after,
-#accordion .panel-title a.collapsed::after{
-    background: #e9e928;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    box-shadow: 0 3px 10px rgba(146, 123, 22, 0.58);
-    color: #fff;
-    content: "💛​";
-    font-family: fontawesome;
-    font-size: 25px;
-    height: 55px;
-    left: -20px;
-    line-height: 55px;
-    position: absolute;
-    text-align: center;
-    top: -5px;
-    transition: all 0.3s ease-in-out 0s;
-    width: 55px;
-}
-
-#accordion .panel-title a.collapsed::after{
-    background: rgb(108, 243, 144);
-    border: 1px solid #ddd;
-    box-shadow: none;
-    color: #333;
-    content: "♻️​";
-}
-
-#accordion .panel-body{
-    background: transparent;
-    border-top: medium none;
-    padding: 20px 25px 10px 9px;
-    position: relative;
-}
-
-#accordion .panel-body p{
-    border-left: 2px dashed #6ab786;
-    padding-left: 25px;
-    font-family: "Nunito", sans-serif;
-    color: #000000;
-    font-weight: 500;
-    text-align: justify;
-}
-
-#accordion .panel-body li{
-    margin-left: 3rem;
-    padding-left: 25px;
-    font-family: "Nunito", sans-serif;
-    color: #000000;
-    font-weight: 500;
-    list-style-position: inside;
-    list-style-type: "✔  ";
-    line-height: 2.5rem;
-    
-}
-
-ul li::marker{
-    font-size: 20px;
-    color: rgb(50, 183, 20);
-}
-
-#accordion .panel-body strong{
-    font-family: "Nunito", sans-serif;
-}
-
-#accordion .panel-body .no-permitted li{
-    margin-left: 3rem;
-    padding-left: 25px;
-    font-family: "Nunito", sans-serif;
-    color: #000000;
-    font-weight: 500;
-    list-style-position: inside;
-    list-style-type: "✘  ";
-    line-height: 2.5rem;
-}
-
-.no-permitted li::marker{
-    font-size: 20px;
-    color: rgb(244, 25, 25);
-}
-
-/*--------------FOOTER-------------- */
-
-footer{
-    width: 100%;
-    padding: 50px 0px;
-    font-family: 'Nunito', sans-serif;
-    *background-image: url(../img/background-footer.svg);
-    *background-size: cover;
-    background: linear-gradient(to bottom, #eef451, hsl(52, 98%, 53%));
-    -webkit-mask-image: url("../img/background-footer.svg");
-    mask-image: url("../img/background-footer.svg");
-    -webkit-mask-size: cover;
-    mask-size: cover;
-}
-
-.container__footer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    padding-top: 100px;
-}
-
-.box__footer{
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-}
-
-.box__footer .terms{
-    max-width: 350px;
-    margin-top: 20px;
-    font-weight: 500;
-    color: #000000;
-    font-size: 18px;
-
-}
-
-.box__footer h2{
-    font-family: "Balloon-dreams";
-    font-size: 23px;
-    margin-bottom: 30px;
-    color: #000000;
-    font-weight: 300;
-}
-
-.box__footer a{
-    margin-top: 10px;
-    color: #000000;
-    font-weight: 600;
-}
-
-.box__footer a:hover{
-    opacity: 0.8;
-}
-
-.box__footer a .fab{
-    font-size: 20px;
-}
-
-.box__copyright{
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-    padding: 0px 40px;
-}
-
-.box__copyright p{
-    margin-top: 20px;
-    color: #7a7a7a;
-}
-
-.box__copyright hr{
-    border: none;
-    height: 1px;
-    background-color: #000000;
-}

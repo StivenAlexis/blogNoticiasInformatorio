@@ -17,7 +17,7 @@
   * {
     margin: 0px;
     padding: 0px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     font-family: Roboto;
   }
   
@@ -47,7 +47,7 @@
     width: 400px;
     height: 420px;
     margin: 5px;
-    border-radius: 6px;
+    border-radius: 10px;
     overflow: hidden;
     background: #fff;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
@@ -86,13 +86,14 @@
     text-decoration: none;
     padding: 6px;
     margin: 10px;
-    color: #81b214;
-    border: 1px solid #81b214;
+    background-color: #0bd19f;
+    color: #000000;
+    border: 1px solid #759431;
     border-radius: 4px;
     transition: all 400ms ease;
   }
   .contenido a:hover {
-    background: #0bd19f;
+    background: #0b40d1;
     color: #fff;
   }
   .btn {

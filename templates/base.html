@@ -9,13 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias Chacú</title>
     <link rel="icon" href="{% static 'img/logo.png' %}">
-    <link rel="stylesheet" href="{% static 'css/Styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {% block css %}
         
     {% endblock css %}
-    <script src="" crossorigin="anonymous"></script>
-    <script src="{% static ''%}"></script>  
-
+    <script src="https://kit.fontawesome.com/8d53197554.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/scrollreveal.js'%}"></script>  
 </head>
 
 
@@ -78,7 +78,7 @@
                                 <!-- <a href="{% url 'logout' %}" class="btn1"><button>Cerrar Sesión</button></a>-->
                             </div>
                         {% else %}
-                        <a href="{% url 'login' %}" class="btn"><button>Iniciar Sesion</button></a>
+                        <a href="{% url 'login' %}" class="btn"><button>Iniciar Sesión</button></a>
                         {% endif %}
                     </div>
                 </nav>
@@ -89,24 +89,36 @@
 
 <body>
     <div class="noticias__container">
-             
+        <main class="main_index">
+        <div class="container_main"> 
+        
+                
 {% block content %}
-<main class="main_index">
-    <div class="container_main">
+ 
         <div class="words1">
             <h1 class="words">Chacú Noticias</h1>
-            <h2 class="words__h2">Información confiable a un click de distancia</h2>             
+            <h2 class="words__h2">Información confiable a un click de distancia</h2>
+            <h1 class="words"></h1>
+            <h1 class="words__h5">Informatorio</h1>
+            <h1 class="words__h5">2024</h1>
+            <h1 class="words__h5">Segunda Etapa</h1>
+            <h1 class="words__h5">Grupo N°6</h1>
+            <h1 class="words__h5">Profesor: Nicolás Tortosa</h1>
+            <h1 class="words__h5">Mentora: Nara Finos</h1>
+
+            
+
+                         
         </div>
-    </div>
-</main>
+   
 {% endblock content %}
 </div>
+</main>
+</div>
+
 </body>
 
-
 <footer class="footer-area">
-    <div class="footer-wave-box">
-        </div>
         <div class="main_index">
             <div class="footer">
                 <div class="single-footer">
@@ -128,8 +140,9 @@
                     <div class="single-footer">
                         <h4>REDES SOCIALES</h4>
                         <div class="footer-social">
-                            <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/informatorio.chaco" target="_blank" class="fa fa-facebook"></a>
+                            
+                            <a href="https://www.instagram.com/informatorio/" target="_blank" class="fa fa-instagram"></a>
                         </div>
                     </div>
                     <div class="single-footer">

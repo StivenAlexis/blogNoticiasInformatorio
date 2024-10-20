@@ -1,18 +1,18 @@
 #faces {
     height: 300px;
-    margin: 30px;
+    margin: 20px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
   }
   .roundedImg {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50px;
   }
   .animated {
-    transition: 0.5s;
+    transition: 0.35s;
   }
 
   .animated p {
@@ -20,7 +20,7 @@
   }
 
   .animated:hover {
-    transform: scale(1.3, 1.3);
+    transform: scale(1.2, 1.2);
   }
   marquee {
     background-color: #81b214;
@@ -28,7 +28,7 @@
     letter-spacing: 3px;
   }
   .row {
-    height: 300px;
+    height: 360px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,6 +39,13 @@
   #row4 {
     height: 450px;
   }
+
+  #row5 {
+    height: 450px;
+    background-color: #7ca3ec;
+  }
+
+
   
   .column {
     display: flex;
@@ -59,33 +66,52 @@
     height: 100%;
   }
   .verticalText p {
-    transform: rotate(-90deg);
+    transform: rotate(-60deg);
     letter-spacing: 5px;
     font-size: 30px;
     font-weight: 900;
+    text-shadow: 1px 1px 2px #000000;
   }
   /* row1 */
-  #colaa {
+
+  #colad {
+    width: 45%;
+    background-color: #17b262;
+  }
+  #colad p {
+    letter-spacing: 5px;
+    font-size: 33px;
+    transform: rotate(60deg);
+    margin-left: 5%;
+    white-space: nowrap;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px #000000;
+  }
+  #col11 {
     width: 100%;
     background-color: #00af91;
+    background: linear-gradient(to right,  #00af91 0%, #17b262 100%);
   }
+  #col11 p {
+    letter-spacing: 5px;
+    font-size: 33px;
 
-  #colaa p {
-    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px #000000;
   }
 
   #colba {
-    width: 70%;
+    width: 30%;
+    background-color: #000000;
   }
-  #colaa b {
-    font-family: Alégre Sans;
-    letter-spacing: 2px;
-    color: #f0bb62;
+  #col11 b {
+    font-family: Roboto;
+    color: #2613cf;
   }
   /* row2 */
   #colab {
     width: 25%;
-    background-color: #f0bb62;
+    background-color: #4c4f7a;
   }
   #colab p {
     margin-left: 0%;
@@ -112,37 +138,38 @@
   }
   /* row3 */
   #colac {
-    width: 70%;
+    width: 30%;
   }
   
   #colbc {
     width: 100%;
-    background-color: #f4eea9;
+    background-color: #3152be;
   }
 
   #colbc p {
-    font-size: 24px;
+    font-size: 45px;
   }
 
   /* row4 */
   #colad {
-    width: 25%;
-    background-color: #00af91;
+    width: 45%;
+    background-color: #17b262;
   }
   #colad p {
     letter-spacing: 5px;
     font-size: 33px;
-    transform: rotate(-90deg);
+    transform: rotate(60deg);
     margin-left: 5%;
     white-space: nowrap;
     font-weight: 900;
+    text-shadow: 1px 1px 2px #000000;
   }
   #colbd {
     width: 75%;
-    background-color: #f0bb62;
+    background-color: #95caea;
   }
 
   #colbd ul li {
-    font-size: 24px;
+    font-size: 30px;
     list-style: disc;
   }

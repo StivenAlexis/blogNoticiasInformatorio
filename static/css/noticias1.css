@@ -196,7 +196,7 @@
     font-size: 20px;
     border: none;
     cursor: pointer;
-    background-color: #4caf50;
+    background-color: #95caea;
     border-radius: 5px;
     transform: scale(1.1);
   }
@@ -208,6 +208,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #17b262;
   }
   
   .step-links div a {
