@@ -15,15 +15,17 @@ ALLOWED_HOSTS = []
 
 #CONFIGURACION REAL DE LA BD DE PRODUCCION
 #CONFIGURAR USUARIOS Y CONTRASEÑAS Y PUERTOS.
+
 DATABASES = {
     'default': {
-        'ENGINE': '',
-        'NAME':'',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'your_database_name',
+        'USER': 'your_username',
+        'PASSWORD': 'your_password',
+        'HOST': 'localhost',  # or your database server address
+        'PORT': '3306',
     }
 }
+
 
 STATICFILES_DIRS = (BASE_DIR, 'static')

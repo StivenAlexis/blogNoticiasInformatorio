@@ -16,23 +16,32 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+
 # AUTH
 from django.urls import reverse_lazy
 LOGIN_REDIRECT_URL = reverse_lazy('home')
 LOGOUT_REDIRECT_URL = reverse_lazy('home')
 LOGIN_URL = reverse_lazy('usuarios:login')
 
-# para enviar email desde contactos/views.enviar_contacto
-#EMAIL_BACKEND = ''
-#EMAIL_HOST = ''
-#EMAIL_HOST_USER = ''
-#EMAIL_HOST_PASSWORD = ''
-#EMAIL_PORT = ''
+
+SECRET_KEY = 'django-insecure-%ujzgm923y)sew7b&08$e(+m%jx6*jb$11-5wd@f=q+p=*lk+('
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+"""
+ALLOWED_HOSTS = ['grupo6infor.pythonanywhere.com ']
+"""
+ALLOWED_HOSTS = ['*']
 
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 #EMAIL_USE_TLS = True
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -77,12 +86,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'blog.wsgi.application'
 
-
-
-
-
-# Password validation
-# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
